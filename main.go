@@ -1,23 +1,3 @@
-/*
-	composicion de un tlv:
-		Largo: 2 caracteres que indican el largo del valor, este campo es importante puesto que indica cuantos caracteres leer a continuación.
-		Tipo: El tipo tiene un largo de 3 caracteres donde el primer caracter indica el tipo de dato (A: Alfanumérico y N: Numérico) y dos caracteres para indicar el numero de campo Ejemplo: "01" o "15".
-		Valor: Este es el valor del campo, el cual corresponde al valor del campo, su largo esta determinado por la porción Largo.
-
-	Ejemplo: 11A05AB398765UJ102N2300
-						 2  3          index + largo
-	[11 A05 AB398765UJ1 ; 02 N23 00]
-
-	Largo: 11 (indica cuantos caracteres leer despues para extraer el valor)
-	Typo: A05 (A indica tipo de dato: A alfanumerico, N Numerico. 05 indica el numero de campo o la posicion del primer caracter del Valor)
-	Valor: AB398765UJ1 (son los 11 caracteres que dice el largo, a partir de la posicion 05 de la cadena total)
-
-	Largo: 02 (2 caracteres de largo)
-	Typo: N23 (N de numerico, en la posicion 23)
-	Valor: 00
-
-*/
-
 package main
 
 import (
