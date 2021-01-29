@@ -13,3 +13,6 @@ test:
 
 build:
 	$(GOBUILD) -o $(BINARY_NAME) -v
+
+lint:
+	$(LINTER) run
